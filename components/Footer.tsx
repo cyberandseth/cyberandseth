@@ -10,7 +10,7 @@ const siteLinks = [
 
 const socialLinks = [
   { href: 'https://youtube.com/@CyberandSeth',                      label: 'YouTube' },
-  { href: 'https://www.tiktok.com/@cyberandseth',                   label: 'TikTok' },
+  { href: 'https://www.tiktok.com/@cyber.and.seth',                 label: 'TikTok' },
   { href: 'https://www.instagram.com/cyberandseth',                 label: 'Instagram' },
   { href: 'https://cyberandseth.gumroad.com',                       label: 'Gumroad' },
 ]
