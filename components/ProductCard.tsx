@@ -5,9 +5,12 @@ interface ProductCardProps {
   name: string
   track: 'Track A' | 'Track B' | 'Both'
   price: string
+  badge?: string
   description: string[]
   ctaText: string
-  gumroadUrl: string
+  gumroadUrl?: string
+  internalLink?: boolean
+  href?: string
   coverImage: string
 }
 
@@ -21,12 +24,25 @@ export default function ProductCard({
   name,
   track,
   price,
+  badge,
   description,
   ctaText,
   gumroadUrl,
+  internalLink,
+  href,
   coverImage,
 }: ProductCardProps) {
   const isFree = price === 'Free'
+  const ctaHref = internalLink && href ? href : (gumroadUrl || href || '#')
+
+  const ctaClass = `
+    mt-2 block text-center font-body font-bold text-sm tracking-widest uppercase py-3 px-6
+    transition-all duration-200
+    ${isFree
+      ? 'bg-transparent border border-ice text-ice hover:bg-ice hover:text-navy'
+      : 'bg-gold text-navy hover:bg-gold/90'
+    }
+  `
 
   return (
     <div className="flex flex-col bg-[#111f2e] border border-white/8 rounded-sm overflow-hidden group hover:border-gold/30 transition-colors duration-300">
@@ -44,6 +60,12 @@ export default function ProductCard({
             fill
             className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
           />
+        )}
+        {/* Badge pill */}
+        {badge && (
+          <div className="absolute top-3 right-3 z-10 bg-gold text-navy font-body font-bold text-[10px] tracking-widest uppercase px-2.5 py-1 rounded-full">
+            {badge}
+          </div>
         )}
       </div>
 
@@ -74,21 +96,20 @@ export default function ProductCard({
         </div>
 
         {/* CTA */}
-        <Link
-          href={gumroadUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={`
-            mt-2 block text-center font-body font-bold text-sm tracking-widest uppercase py-3 px-6
-            transition-all duration-200
-            ${isFree
-              ? 'bg-transparent border border-ice text-ice hover:bg-ice hover:text-navy'
-              : 'bg-gold text-navy hover:bg-gold/90'
-            }
-          `}
-        >
-          {ctaText}
-        </Link>
+        {internalLink && href ? (
+          <Link href={ctaHref} className={ctaClass}>
+            {ctaText}
+          </Link>
+        ) : (
+          <Link
+            href={ctaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={ctaClass}
+          >
+            {ctaText}
+          </Link>
+        )}
       </div>
     </div>
   )

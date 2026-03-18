@@ -1,5 +1,11 @@
 import Link from 'next/link'
 
+const productLinks = [
+  { href: '/products/risk-strategist-workbook', label: 'Risk Strategist Workbook' },
+  { href: '/products/career-toolkit',           label: 'Career Toolkit' },
+  { href: '/products',                          label: 'Your Background Is the Edge' },
+]
+
 const siteLinks = [
   { href: '/',          label: 'Home' },
   { href: '/about',     label: 'About' },
@@ -19,7 +25,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#060c14] border-t border-gold/30">
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {/* Brand column */}
           <div className="flex flex-col gap-4">
             <Link href="/">
@@ -40,6 +46,24 @@ export default function Footer() {
             </h4>
             <nav className="flex flex-col gap-3">
               {siteLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-body font-light text-sm text-dgray hover:text-white transition-colors duration-200 w-fit"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Products */}
+          <div className="flex flex-col gap-4">
+            <h4 className="font-body font-bold text-xs tracking-widest2 uppercase text-dgray">
+              Products
+            </h4>
+            <nav className="flex flex-col gap-3">
+              {productLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}

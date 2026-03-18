@@ -3,9 +3,12 @@ export interface Product {
   name: string
   track: 'Track A' | 'Track B' | 'Both'
   price: string
+  badge?: string
   description: string[]
   ctaText: string
-  gumroadUrl: string
+  gumroadUrl?: string
+  internalLink?: boolean
+  href?: string
   coverImage: string
 }
 
@@ -23,7 +26,23 @@ export const products: Product[] = [
     ],
     ctaText: 'Get the Workbook',
     gumroadUrl: 'https://cyberseth.gumroad.com/l/risk-strategy',
+    internalLink: true,
+    href: '/products/risk-strategist-workbook',
     coverImage: '/images/risk-strategist-workbook.png',
+  },
+  {
+    id: 'career-toolkit',
+    name: "The Career Toolkit Senior Security Analysts Don't Share",
+    track: 'Track A',
+    price: '$97',
+    badge: 'NEW',
+    description: [
+      "Two plug-and-play workbooks that map your domain, track your wins, and build your promotion case — so you stop hoping and start engineering.",
+    ],
+    ctaText: 'Get the Toolkit',
+    internalLink: true,
+    href: '/products/career-toolkit',
+    coverImage: '/images/career-toolkit-cover.png',
   },
   {
     id: 'background-is-the-edge',

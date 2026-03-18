@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'GRC career education for people breaking in from other fields and moving up from technical roles. Real frameworks, honest paths.',
 }
 
-const featuredProducts = products.slice(0, 2)
+const featuredProducts = products.slice(0, 3)
 
 // Replace with your actual latest video ID when ready
 const LATEST_VIDEO_ID = '0I0h3ol45eY'
@@ -45,7 +45,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} {...product} />
             ))}
