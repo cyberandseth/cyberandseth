@@ -65,7 +65,7 @@ export default function Navbar() {
               href="/resources"
               className="font-body font-bold text-xs tracking-widest uppercase bg-gold text-navy px-5 py-2.5 hover:bg-gold/90 transition-colors duration-200"
             >
-              Free Career Map
+              Free Resources
             </Link>
           </div>
 
@@ -124,7 +124,7 @@ export default function Navbar() {
               onClick={() => setMenuOpen(false)}
               className="block text-center font-body font-bold text-sm tracking-widest uppercase bg-gold text-navy py-4 hover:bg-gold/90 transition-colors duration-200"
             >
-              Free Career Map
+              Free Resources
             </Link>
           </div>
         </div>

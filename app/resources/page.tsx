@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Free Resources',
   description:
-    'Start here. Everything free. The GRC Career Map, the YouTube channel, and the frameworks that matter.',
+    'Start here. Everything free. The 3-Lane Test, the YouTube channel, and the frameworks that matter.',
 }
 
 export default function ResourcesPage() {
@@ -27,7 +27,7 @@ export default function ResourcesPage() {
             Start here.<br />Everything free.
           </h1>
           <p className="font-body font-light text-dgray text-lg max-w-2xl leading-relaxed">
-            The Career Map is the starting point. Everything else builds from it.
+            The 3-Lane Test is the starting point. Everything else builds from it.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function ResourcesPage() {
               <div className="text-center px-8">
                 <div className="w-8 h-[2px] bg-gold mx-auto mb-6" />
                 <p className="font-display text-3xl text-white tracking-widest leading-tight">
-                  GRC CAREER<br />MAP
+                  THE 3-LANE<br />TEST
                 </p>
                 <p className="font-body font-light text-gold text-sm mt-4 tracking-wide">
                   Free
@@ -66,11 +66,11 @@ export default function ResourcesPage() {
                   Both Tracks
                 </span>
                 <h2 className="font-display text-4xl md:text-5xl text-white tracking-wide mt-4 leading-tight">
-                  GRC Career Map
+                  The 3-Lane Test
                 </h2>
               </div>
               <p className="font-body font-light text-dgray text-base leading-relaxed">
-                Three GRC lanes mapped side by side — Governance, Risk, and Compliance — with salary ranges, first certifications, and first roles per lane.
+                Three GRC lanes mapped side by side — with salary ranges, first certifications, and first roles. Take the test, find your lane, get your first move.
               </p>
               <ul className="flex flex-col gap-2">
                 {[
@@ -123,9 +123,9 @@ export default function ResourcesPage() {
 
       {/* Inline Kit opt-in */}
       <KitForm
-        headline="Get the GRC Career Map."
+        headline="Get The 3-Lane Test."
         subtext="Three lanes. Salary ranges. First certifications. First moves. Free."
-        buttonText="Send Me the Map"
+        buttonText="Send Me the Test"
         dark
       />
 

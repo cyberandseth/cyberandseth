@@ -14,6 +14,19 @@ export interface Product {
 
 export const products: Product[] = [
   {
+    id: 'resume-rewrite',
+    name: 'The 5-Minute GRC Resume Rewrite',
+    track: 'Both',
+    price: 'Free',
+    description: [
+      "Your GRC resume isn't getting responses — not because your experience is wrong, but because it's written in the wrong language.",
+      "One before/after. One fill-in template. One next step. Consumable in under 5 minutes.",
+    ],
+    ctaText: 'Get It Free',
+    href: 'https://join.cyberandseth.com',
+    coverImage: '',
+  },
+  {
     id: 'risk-strategist-workbook',
     name: 'Risk Strategist Workbook',
     track: 'Track A',

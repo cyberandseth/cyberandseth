@@ -96,11 +96,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials placeholder — activate after first Challenge cohort */}
+      {/* TODO: Add real testimonials after first Challenge cohort (Week 5) */}
+      <section className="bg-navy py-24 px-6 hidden">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12">
+            <SectionLabel>Social Proof</SectionLabel>
+            <h2 className="font-display text-5xl md:text-6xl text-white tracking-wide">
+              What people are saying.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="bg-[#111f2e] border border-white/8 p-8 flex flex-col gap-4"
+              >
+                <p className="font-body font-light text-dgray text-sm leading-relaxed italic">
+                  &ldquo;&rdquo;
+                </p>
+                <div className="mt-auto">
+                  <p className="font-body font-bold text-white text-sm"></p>
+                  <p className="font-body font-light text-dgray text-xs"></p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Email capture */}
       <KitForm
-        headline="Start with the free GRC Career Map."
-        subtext="Three lanes. Salary ranges. First certifications. First moves. Free."
-        buttonText="Get the Career Map"
+        headline="Get the free GRC Resume Rewrite."
+        subtext="One before/after. One template. One next step. Under 5 minutes."
+        buttonText="Send It Free"
         dark
       />
     </>

@@ -29,17 +29,28 @@ export default function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/resources"
+          <a
+            href="https://join.cyberandseth.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-body font-bold text-sm tracking-widest uppercase bg-gold text-navy px-8 py-4 hover:bg-gold/90 transition-colors duration-200 w-full sm:w-auto text-center"
           >
-            Get the Free Career Map
-          </Link>
+            Get the Free Resume Rewrite
+          </a>
           <Link
             href="/about"
             className="font-body font-bold text-sm tracking-widest uppercase bg-transparent border border-white text-white px-8 py-4 hover:border-gold hover:text-gold transition-colors duration-200 w-full sm:w-auto text-center"
           >
             Start Here
+          </Link>
+        </div>
+
+        <div className="mt-4 text-center">
+          <Link
+            href="/resources"
+            className="font-body font-light text-sm text-dgray hover:text-gold transition-colors duration-200 tracking-wide"
+          >
+            Or start with the free 3-Lane Test →
           </Link>
         </div>
       </div>
